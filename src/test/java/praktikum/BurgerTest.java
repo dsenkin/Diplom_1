@@ -1,18 +1,13 @@
 package praktikum;
 
-import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.*;
-import static org.mockito.MockitoAnnotations.openMocks;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
@@ -27,40 +22,10 @@ public class BurgerTest {
     private Ingredient fillingIngredient;
     // IngredientType.FILLING, "cutlet", 100)
 
-
-    //@Parameterized.Parameter(0)
-//    public IngredientType type;
-//    //@Parameterized.Parameter(1)
-//    public String name;
-//    //@Parameterized.Parameter(2)
-//    public float price;
-
     Burger burger;
-
-//    public BurgerTest(){};
-//    public BurgerTest(IngredientType type, String name, float price) {
-//        this.type = type;
-//        this.name = name;
-//        this.price = price;
-//    }
-
-//    @Parameterized.Parameters
-//    public static Object[][] testIngredients(){
-//        return new Object[][]{
-//                {IngredientType.SAUCE, "hot sauce", 100},
-//                {IngredientType.SAUCE, "sour cream", 200},
-//                {IngredientType.SAUCE, "chili sauce", 300},
-//                {IngredientType.FILLING, "cutlet", 100},
-//                {IngredientType.FILLING, "dinosaur", 200},
-//                {IngredientType.FILLING, "sausage", 300},
-//        };
-//    }
-
 
     @Before
     public void setUp() throws Exception {
-//        MockitoAnnotations.initMocks(this);
-//        AutoCloseable autoCloseable = openMocks(this);
         burger = new Burger();
     }
 
@@ -120,6 +85,7 @@ public class BurgerTest {
         burger.addIngredient(sauceIngredient);
         burger.addIngredient(fillingIngredient);
 
+        // для справки
         // "white bun", 200
         // IngredientType.SAUCE, "chili sauce", 300
         // IngredientType.FILLING, "cutlet", 100)
