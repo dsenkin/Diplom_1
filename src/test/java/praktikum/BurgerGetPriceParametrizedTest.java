@@ -58,7 +58,7 @@ public class BurgerGetPriceParametrizedTest {
     }
 
     @Test
-    public void BurgerGetPriceParamTest() {
+    public void burgerGetPriceParamTest() {
         when(bun.getPrice()).thenReturn(bunPrice);
         when(bun.getName()).thenReturn("test bun");
         burger.setBuns(bun);
