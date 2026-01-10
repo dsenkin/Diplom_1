@@ -14,13 +14,10 @@ public class BurgerTest {
 
     @Mock
     private Bun bun;
-    // "white bun", 200
     @Mock
     private Ingredient sauceIngredient;
-    // IngredientType.SAUCE, "chili sauce", 300
     @Mock
     private Ingredient fillingIngredient;
-    // IngredientType.FILLING, "cutlet", 100)
 
     Burger burger;
 
@@ -84,11 +81,6 @@ public class BurgerTest {
 
         burger.addIngredient(sauceIngredient);
         burger.addIngredient(fillingIngredient);
-
-        // для справки
-        // "white bun", 200
-        // IngredientType.SAUCE, "chili sauce", 300
-        // IngredientType.FILLING, "cutlet", 100)
 
         Mockito.when(bun.getPrice()).thenReturn((float)200);
         Mockito.when(bun.getName()).thenReturn("white bun");
